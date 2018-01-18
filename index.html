@@ -1,7 +1,95 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Tervetuloa!</title>
+<meta charset="UTF-8">
+<link href="style.css" rel="stylesheet" type="text/css" min-width>
+<meta name="author" content="Jaakko">
+<meta name="description" content="html-harjoitus">
+<!--<meta http-equiv="refresh" content="10">  tämä on refresh koodi -->
+<link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+<link href="mobiili.css" rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+
+<header>
+<h1>Harmittaako?</h1>
+
+</header>
+
+
+<div>
+	<center>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+	$('#video').hide();
+	$('#pekoni').hide();
+	$('#doge').hide();
+	$('#essi').hide();
+	$('#1').hide();
+	$('#2').hide();
+	$('#3').hide();
+	$('#4').hide();
+	$('#show').click(function() {
+		$('#video').show();
+			var title = $("iframe#video").attr("src", $("iframe#video").attr("src").replace("autoplay=0", "autoplay=1"));
+		//$("#video")[0].src += "&autoplay=1";
+		$('#pekoni').show();
+		$('#doge').show();
+		$('#essi').show();
+		$('#1').show();
+		$('#2').show();
+		$('#3').show();
+		$('#4').show();
+		$(this).unbind("click");
+		 });
+	});
+</script>
+
+<button class="button-success pure-button" id="show" href="#">Paina nappia jos harmittaa :()</button>
+<br></br>
+
+
+
+<br><br>
+
+<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?wmode=transparent&amp;autoplay=0&amp;autohide=1" frameborder="0" allowfullscreen></iframe>
+<img id="pekoni"
+			src="http://www.gm-trucks.com/forums/uploads/profile/photo-114140.gif?_r=1424966395"
+
+<a href="http://aijaa.com/wj0FHV" target="_blank">
+
+<img id="essi"
+			src="http://i4.aijaa.com/t/00184/13832056.t.jpg"></a>
+
+<img id="doge"
+			src="http://i1.kym-cdn.com/photos/images/newsfeed/000/611/330/104.png"
+
+
+<img id="1"
+			src="http://www.reactiongifs.us/wp-content/uploads/2014/05/survive_tropic_thunder.gif"
+
+
+<img i="4"
+			src="http://big.assets.huffingtonpost.com/1120officespace.gif"
+
+
+img id="2"
+			src="http://www.willkara.com/content/images/2014/Sep/frustrated-annoyed-programming-fuck-this-blinds-css-fuck-it-peter-griffin-frustrated-with-blind.gif"
+
+
+img id="3"
+			src="https://i.imgur.com/VhlQKh.jpg"
+
+
+
+</center>
+</div>
+
 </body>
 </html>
