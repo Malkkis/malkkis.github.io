@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-size: 18px;
-  font-family:arial;
+  font-family: 'Lato', sans-serif;
 }
 .header span {
 	 cursor:pointer;
@@ -13,25 +13,64 @@ body {
   width: 100%;
   background-color: #f1f1f1;
   }
- 
+  /* overlay valikko */
+  .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+  }
+  .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+  }
+  .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.5s;
+  }
+  .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+  }
+  .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+  }
+
  #valikko {
-	position: fixed;
-    top: 0;
-    left: 0;
-	
+   position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 35px;
+
  }
  #ylos {
-	position: fixed;
-    top: 0;
-    right: 0; 
+   position: absolute;
+    top: 8px;
+    right: 16px;
 	text-decoration:none;
 	color:black;
+    font-size: 35px;
   }
 
 .header h3 {
   text-align: center;
-  font-size: 20px;
-  
+  font-size: 22px;
+
 }
 .progress-container {
   width: 100%;
@@ -46,15 +85,19 @@ body {
 /* milloin lista alkaa headerin alta */
 .content {
   padding: 50px 0;
-  margin: 25px auto 0 auto;
+  margin: 0px auto 0 auto;
   width: 95%;
+}
+/* scrolli ei mene ihan ylÃ¶s asti ilman tÃ¤tÃ¤ */
+.bufferzone {
+  margin:35px;
 }
 
 /*  nappi */
 .reveal {
 cursor:pointer;
 list-style-type: none;
-    
+
 	background-color:#33b5e5;
 	text-align:center;
 }
@@ -62,13 +105,13 @@ h3.reveal {
 	padding:10px;
 	margin-top:  5px;
 	margin-bottom: 5px;
-	
+
 }
 /* nappi hover  */
 .reveal:hover  {
 	background-color: #0099cc;
 }
-/* tekstisisällön taustan väri */
+/* tekstisisï¿½llï¿½n taustan vï¿½ri */
 div.column {
 	background-color: #f1f1f1;
 }
@@ -77,43 +120,6 @@ div.column p{
 	margin:0px;
 	padding:10px;
 }
-/* overlay valikko */
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
+img {
+  max-width: 100%;
 }
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.5s;
-}
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-
-

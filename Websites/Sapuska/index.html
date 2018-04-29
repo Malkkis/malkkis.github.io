@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300;400" rel="stylesheet">
 <script type="text/javascript">
-// When the user scrolls the page, execute myFunction 
+// When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -15,14 +17,14 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 // show and hide content mechanics:
-$(function() // run after page loads 
-{ 
-  $(".reveal").click(function() 
-  {  // hides matched elements if shown, shows if hidden 
-    $(".toggle", $(this).next()).toggle("slow"); 
-  }); 
+$(function() // run after page loads
+{
+  $(".reveal").click(function()
+  {  // hides matched elements if shown, shows if hidden
+    $(".toggle", $(this).next()).toggle("slow");
+  });
 });
-// OVERLAY 
+// OVERLAY
 function openOverlay() {
     document.getElementById("overlay").style.width = "100%";
 }
@@ -57,16 +59,17 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
+<body id="top">
 <div class="header">
-<h3><span id="valikko" onclick="openOverlay()">&#9776; Valikko</span></h3>
-<h3><a id="ylos" href="#top">Ylös &#x2191;</a></h3>
+<h3><span id="valikko" onclick="openOverlay()">&#9776;</span></h3>
+<h3><a id="ylos" href="#top">&#x2191;</a></h3>
   <h3>Sapuskasivut</h3>
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
-  </div>  
+  </div>
 </div>
-<div id="top" class="content">
+<div class="content">
+  <div class="bufferzone"></div>
 <!-- OVERLAY -->
  <div id="overlay" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
@@ -74,9 +77,66 @@ $(document).ready(function(){
 <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Clients</a>
-    <a href="#">Contact</a>  
+    <a href="#">Contact</a>
   </div>
-</div> 
+</div>
+<!-- kolumni -->
+<div class="column">
+<h3 class="reveal" href="javascript:void(0);">
+Kukkakaaliwingsit
+</h3>
+<div>
+<div class="toggle" style="display:none;">
+<img src="images/kukkakaaliwingsit.jpg"></img>
+<p>
+  Ainekset
+4 annosta
+1(1 kg)
+iso kukkakaali
+Kuorrutus
+1dl
+vehnäjauhoja
+1/2dl
+Pirkka grahamjauhoja
+1 1/2dl
+vettä
+1rkl
+öljyä
+1/2tl
+suolaa
+ripaus
+mustapippuria
+1tl
+savupaprikajauhetta
+Lisäksi
+4rkl
+sriracha-chilikastiketta
+2rkl
+öljyä
+Dippi
+1tlk(200 g)
+kaurapohjaista crème fraîchea (esim. Oatly)
+1
+valkosipulinkynsi hienonnettuna
+1/4dl
+ruohosipulia hienonnettuna
+1/2tl
+omenaviinietikkaa
+1/4tl
+suolaa
+ripaus
+mustapippuria
+</p>
+<p>
+Valmistus 30 - 60 min<br></br>
+ Irrottele kukkakaali nupuiksi. Sekoita kuorrutuksen ainekset keskenään kierrevatkaimella. Anna turvota 5-10 minuuttia.<br></br>
+ Pyörittele kukkakaalit taikinassa muutamassa erässä. Valuta ylimääräinen taikina nupuista kulhoon. Levitä kukkakaalit pellille leivinpaperin päälle.<br></br>
+ Kypsennä 225 asteessa noin 20 minuuttia. Sekoita tällä välin dipin ainekset keskenään ja pane se jääkaappiin tekeytymään.<br></br>
+ Sekoita sriracha ja öljy ja sivele sudilla kauttaaltaan kukkakaaleille. Jatka paistamista uuniin ylätasolla vielä noin 10 minuuttia. Tarjoa kukkakaaliwingsit heti dipin kanssa.
+ </p>
+</div>
+</div>
+</div>
 <!-- kolumni -->
 <div class="column">
 <h3 class="reveal" href="javascript:void(0);">
@@ -91,24 +151,7 @@ Valmistus 30 - 60 min<br></br>
  Kypsennä 225 asteessa noin 20 minuuttia. Sekoita tällä välin dipin ainekset keskenään ja pane se jääkaappiin tekeytymään.<br></br>
  Sekoita sriracha ja öljy ja sivele sudilla kauttaaltaan kukkakaaleille. Jatka paistamista uuniin ylätasolla vielä noin 10 minuuttia. Tarjoa kukkakaaliwingsit heti dipin kanssa.
  </p>
-</div> 
 </div>
-</div>
-<!-- kolumni -->
-<div class="column">
-<h3 class="reveal" href="javascript:void(0);">
-Kukkakaaliwingsit
-</h3>
-<div>
-<div class="toggle" style="display:none;">
-<p>
-Valmistus 30 - 60 min<br></br>
- Irrottele kukkakaali nupuiksi. Sekoita kuorrutuksen ainekset keskenään kierrevatkaimella. Anna turvota 5-10 minuuttia.<br></br>
- Pyörittele kukkakaalit taikinassa muutamassa erässä. Valuta ylimääräinen taikina nupuista kulhoon. Levitä kukkakaalit pellille leivinpaperin päälle.<br></br>
- Kypsennä 225 asteessa noin 20 minuuttia. Sekoita tällä välin dipin ainekset keskenään ja pane se jääkaappiin tekeytymään.<br></br>
- Sekoita sriracha ja öljy ja sivele sudilla kauttaaltaan kukkakaaleille. Jatka paistamista uuniin ylätasolla vielä noin 10 minuuttia. Tarjoa kukkakaaliwingsit heti dipin kanssa.
- </p>
-</div> 
 </div>
 </div>
 <!-- kolumni -->
@@ -125,10 +168,10 @@ Valmistus 30 - 60 min<br></br>
  Kypsennä 225 asteessa noin 20 minuuttia. Sekoita tällä välin dipin ainekset keskenään ja pane se jääkaappiin tekeytymään.<br></br>
  Sekoita sriracha ja öljy ja sivele sudilla kauttaaltaan kukkakaaleille. Jatka paistamista uuniin ylätasolla vielä noin 10 minuuttia. Tarjoa kukkakaaliwingsit heti dipin kanssa.
  </p>
-</div> 
+</div>
 </div>
 </div>
 
  </div>
 </body>
-</html> 
+</html>
