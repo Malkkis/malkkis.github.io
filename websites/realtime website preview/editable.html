@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Edit iframe example</title>
+        <style>
+            .editors, .preview { float: left; display: block; }
+            .editors { width: 500px; margin-right: 25px; }
+                .editors textarea { width: 100%; height: 300px; }
+            .preview { width: 800px; }
+                .preview iframe { width: 100%; height: 800px; }
+        </style>
+    </head>
+    <body>
+        <div class="editors">
+            <p>
+                <label>CSS</label>
+            </p>
+            <p>
+                <textarea id="preview-editor-CSS" onkeyup="updatePreviewCSS(this)"></textarea>
+            </p>
+            <p>
+                <label>HTML</label>
+            </p>
+            <p>
+                <textarea id="preview-editor-HTML" onkeyup="updatePreviewHTML(this)"></textarea>
+            </p>
+        </div>
+
+        <div class="preview">
+            <iframe id="preview" src="preview.html"></iframe>
+        </div>
+
+        <script>
+            function updatePreviewHTML(elem) {
+
+                var frame = document.getElementById('preview');
+                var content = elem.value;
+
+                frame.contentWindow.document.body.innerHTML = content;  
+            }
+
+            function updatePreviewCSS(elem) {
+
+                var frame = document.getElementById('preview');
+                var content = elem.value;
+
+                frame.contentWindow.document.getElementsByTagName('style')[0].innerHTML = content;  
+            }
+        </script>
+    </body>
+</html>
